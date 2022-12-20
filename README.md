@@ -1,12 +1,19 @@
-#:tw-23eb:  Instalando ToDo List
-Clonar el repositorio
+
+------------
+
+# Instalando ToDo List
+Clonar el repositorio>
+
 `git clone https://github.com/rulomak/challenge---`
- Entre detro de la carpeta del proyecto 
+
+ Entre detro de la carpeta del proyecto>
 `cd challenge---`
-Instalar el archivo requirements.txt
+
+Instalar el archivo requirements.txt >
+
 `pip install -r requirements.txt`
 
-#  :tw-25b6: Corriendo  App
+# Corriendo  App
 Para levantar el servidor 
 `python manage.py runserver`
 
@@ -20,7 +27,7 @@ password: invera123`
 Si lo desea puede crear uno nuevo desde:
 `http://127.0.0.1:8000/admin/`
 
-# :tw-23ec: consumiendo Api
+# consumiendo Api
 * Accediendo a la URL:   http://127.0.0.1:8000/todo/
 podra ver todas las tareas pendientes.
 
