@@ -1,37 +1,39 @@
-# Invera ToDo-List Challenge (Python/Django Jr-SSr)
+#:tw-23eb:  Instalando ToDo List
+Clonar el repositorio
+`git clone https://github.com/rulomak/challenge---`
+ Entre detro de la carpeta del proyecto 
+`cd challenge---`
+Instalar el archivo requirements.txt
+`pip install -r requirements.txt`
 
-El propósito de esta prueba es conocer tu capacidad para crear una pequeña aplicación funcional en un límite de tiempo. A continuación, encontrarás las funciones, los requisitos y los puntos clave que debés tener en cuenta durante el desarrollo.
+#  :tw-25b6: Corriendo  App
+Para levantar el servidor 
+`python manage.py runserver`
 
-## Qué queremos que hagas:
+Acessando localhost:
+`http://127.0.0.1:8000/todo/`
 
-- El Challenge consiste en crear una aplicación web sencilla que permita a los usuarios crear y mantener una lista de tareas.
-- La entrega del resultado será en un nuevo fork de este repo y deberás hacer una pequeña demo del funcionamiento y desarrollo del proyecto ante un super comité de las más grandes mentes maestras de Invera, o a un par de devs, lo que sea más fácil de conseguir.
-- Podes contactarnos en caso que tengas alguna consulta.
+Usuario de prueba:
+`usuario: invera_admin |
+password: invera123`
 
-## Objetivos:
+Si lo desea puede crear uno nuevo desde:
+`http://127.0.0.1:8000/admin/`
 
-El usuario de la aplicación tiene que ser capaz de:
+# :tw-23ec: consumiendo Api
+* Accediendo a la URL:   http://127.0.0.1:8000/todo/
+podra ver todas las tareas pendientes.
 
-- Autenticarse
-- Crear una tarea
-- Eliminar una tarea
-- Marcar tareas como completadas
-- Poder ver una lista de todas las tareas existentes
-- Filtrar/buscar tareas por fecha de creación y/o por el contenido de la misma
+* Para crear una nueva tarea, dirijase a la parte inferior  en la pestaña 'HTML form'   llene los campos  y click en el boton POST.
 
-## Qué evaluamos:
+* Si desea filtrar buscando una tarea que contenga una palabra o una fecha determinada, puede usar el boton  Filters  en la parte superior derecha
 
-- Desarrollo utilizando Python, Django. No es necesario crear un Front-End, pero sí es necesario tener una API que permita cumplir con los objetivos de arriba.
-- Uso de librerías y paquetes estandares que reduzcan la cantidad de código propio añadido.
-- Calidad y arquitectura de código. Facilidad de lectura y mantenimiento del código. Estándares seguidos.
-- [Bonus] Manejo de logs.
-- [Bonus] Creación de tests (unitarias y de integración)
-- [Bonus] Unificar la solución propuesta en una imagen de Docker por repositorio para poder ser ejecutada en cualquier ambiente (si aplica para full stack).
+*  Para Editar, Borrar, y Marcar como completada una tarea, primero hay que selecionar la tarea,  se puede  hacer pasando el Id de la misma por la URL  
+ejemplo `http://127.0.0.1:8000/todo/5/`
 
-## Requerimientos de entrega:
+una ves selecionada se puede proceder a:
+* Borrar con el boton delete  (esq. superior derecha )
+* Marcar como completada (tilde en  is complete  - zona inferior de la pantalla )
+* Editar, en la parte inferior de la pantalla pestaña 'Raw Data'  cambiendo lo que necesita  y haciendo click en PUT
 
-- Hacer un fork del proyecto y pushearlo en github. Puede ser privado.
-- La solución debe correr correctamente.
-- El Readme debe contener todas las instrucciones para poder levantar la aplicación, en caso de ser necesario, y explicar cómo se usa.
-- Disponibilidad para realizar una pequeña demo del proyecto al finalizar el challenge.
-- Tiempo para la entrega: Aproximadamente 7 días.
+
