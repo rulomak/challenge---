@@ -4,12 +4,13 @@ from rest_framework import viewsets, permissions
 
 from rest_framework import filters
 
+
 class ToDoViewset(viewsets.ModelViewSet):    
-    queryset = ToDoList.objects.all() 
-    permission_classes = [permissions.AllowAny]  # ( filtrar mas adelante  )
+    permission_classes = [permissions.IsAuthenticated]  
+    queryset = ToDoList.objects.all().order_by('-create_at')
     serializer_class =  ToDoSerializer
 
-    # filtros 
+    # filtros - Busqueda
     filter_backends = [filters.SearchFilter]
     search_fields = ['title', 'description', 'create_at']
 
